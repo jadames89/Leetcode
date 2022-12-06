@@ -1,4 +1,11 @@
 public class FindLongestIncreasingPath {
+
+//    From each cell, you can either move in four directions: left, right, up, or down.
+//    You may not move diagonally or move outside the boundary (i.e., wrap-around is not allowed).
+//    Input: matrix = [[9,9,4],[6,6,8],[2,1,1]]
+//    Output: 4
+//    Explanation: The longest increasing path is [1, 2, 6, 9].
+
     public static int solution(int[][] matrix) {
         int max = 0;
         for (int row = 0; row < matrix.length; row++) {
@@ -8,7 +15,6 @@ public class FindLongestIncreasingPath {
         }
         return max;
     }
-
 
     public static int longestIncreasingPath(int[][] matrix, int row, int col, int temp) {
         int rowLength = matrix.length;
@@ -39,9 +45,11 @@ public class FindLongestIncreasingPath {
 
         int[][] matrix3 = {
                 {1, 2}};
+
         int[][] matrix4 = {
                 {1}};
 
+        // Expected 4, returns 3
         int[][] matrix5 = {
                 {7, 7, 5},
                 {2, 4, 6},
